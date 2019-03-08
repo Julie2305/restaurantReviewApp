@@ -1,4 +1,4 @@
-let cacheVersion = 'restaurantReviewApp-v4';
+let cacheVersion = 'restaurantReviewApp-v20';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -7,10 +7,11 @@ self.addEventListener('install', (event) => {
         '/',
         '/index.html',
         '/restaurant.html',
+        '/js/',
         '/js/main.js',
         '/js/dbhelper.js',
         '/js/restaurant_info.js',
-        '/js/sw.register.js',
+        '/js/sw_registration.js',
         '/img/1.jpg',
         '/img/2.jpg',
         '/img/3.jpg',
@@ -46,9 +47,16 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  let cacheRequest = event.request;
+  if (event.request.url.indexOf('main.html') > -1) {
+    cacheRequest = new Request('main.html');
+  }
+  if (event.request.url.indexOf('restaurant.html') > -1) {
+    cacheRequest = new Request('restaurant.html');
+  }
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
+    caches.match(cacheRequest).then((response) => {
+      return response || fetch(event.request)
     })
   );
 });
