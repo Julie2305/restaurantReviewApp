@@ -210,12 +210,9 @@ nav h1 a {
 /* ====================== Restaurant Details ====================== */
 
 .inside #map {
-   height: 400px;
+  height: 400px;
   width: 100%;
   background-color: #ccc;
-}
-#map-container{
-  order: 2;
 }
 .inside #footer {
   width: 100%;
@@ -232,6 +229,7 @@ nav h1 a {
 }
 .restaurant-img{
   width: 40%;
+  margin: 20px;
 }
 #restaurant-img {
   width: 100%;
@@ -253,19 +251,13 @@ nav h1 a {
   text-transform: uppercase;
   width: 100%;
 }
-#restaurant-container{
-  order: 1;
-}
 #restaurant-container, #reviews-container {
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   width: 100%;
-}
-#reviews-container {
-  order: 3;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -296,6 +288,7 @@ nav h1 a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
 }
 #restaurant-hours td {
   color: #666;

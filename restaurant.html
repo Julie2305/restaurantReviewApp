@@ -18,7 +18,7 @@
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
+    <ul aria-label="breadcrumb navigation" id="breadcrumb" >
       <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -30,25 +30,25 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div aria-label="map with restaurants" id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
+    <section aria-label="information about the restaurant" id="restaurant-container">
       <h2 id="restaurant-name"></h2>
       <div class="restaurant-info">
         <p id="restaurant-cuisine"></p>
         <p id="restaurant-address"></p>
-        <table id="restaurant-hours"></table>
+        <table aria-label="restaurant opening hours" id="restaurant-hours"></table>
       </div>
       <div class="restaurant-img">
-        <img id="restaurant-img">
+        <img alt="restaurant image" id="restaurant-img">
       </div>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+      <ul aria-label="reviews list" id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
   </main>
